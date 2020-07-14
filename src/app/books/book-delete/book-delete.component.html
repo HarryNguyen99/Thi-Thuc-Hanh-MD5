@@ -1,34 +1,5 @@
-<!--<div class="text-center">-->
-<!--  <h2>Bạn có muốn xóa không ?</h2>-->
-<!--</div>-->
-
-<!--<div *ngIf="successMessage" class="alert alert-success">-->
-<!--  <p>{{successMessage}}</p>-->
-<!--</div>-->
 
 
-<!--<div *ngIf="failMessage" class="alert alert-danger">-->
-<!--  <p>{{failMessage}}</p>-->
-<!--</div>-->
-
-<!--<label class="col">-->
-<!--  Title:-->
-<!--  <span>{{book.title}}</span>-->
-<!--</label>-->
-<!--<br>-->
-<!--<label class="col">-->
-<!--  Author:-->
-<!--  <span>{{book.author}}</span>-->
-<!--</label>-->
-<!--<br>-->
-<!--<label class="col">-->
-<!--  Description:-->
-<!--  <span>{{book.description}}</span>-->
-<!--</label>-->
-<!--<div class="col">-->
-<!--  <button class="btn btn-info" type="submit" (click)="deleteBook()">Delete</button>-->
-<!--</div>-->
-<!--<router-outlet></router-outlet>-->
 
 <div class="full-content">
   <p>Bạn có chắc muốn xóa : <u class="text-danger">{{book.title}}</u></p>
@@ -37,21 +8,22 @@
   </div>
   <table class="table table-bordered">
     <tr>
-      <th><p>Tên Sách : </p></th>
+      <th><p>Title : </p></th>
       <td>{{book.title}}</td>
     </tr>
     <tr>
-      <th><p>Tên Tác Giả : </p></th>
+      <th><p>Author : </p></th>
       <td>{{book.author}}</td>
     </tr>
     <tr>
-      <th><p>Mô Tả : </p></th>
+      <th><p>Description : </p></th>
       <td>{{book.description}}</td>
     </tr>
   </table>
   <input type="button" value="Delete" class="btn btn-success" style="margin-left: 60px" (click)="deleteBook()">
   <button type="button" value="Back" class="btn btn-success"
           style="margin-left: 60px;"
-          [routerLink]="['/list']">Back
+          [routerLink]="['/list-book']">Back
   </button>
 </div>
+<router-outlet></router-outlet>

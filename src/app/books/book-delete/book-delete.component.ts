@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Book} from '../../book';
 import {Subscription} from 'rxjs';
 import {BookServiceService} from '../../sevices/book-service.service';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 
 @Component({
   selector: 'app-book-delete',
@@ -36,5 +36,6 @@ export class BookDeleteComponent implements OnInit {
       this.message = 'Xóa Không Thành Công';
     });
   }
+
 
 }

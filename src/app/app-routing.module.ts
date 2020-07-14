@@ -17,7 +17,7 @@ const routes: Routes = [{
   path: 'list-book/edit-book/:id',
   component: BookEditComponent
 }, {
-  path: 'list-photo/delete-book/:id',
+  path: 'list-book/delete-book/:id',
   component: BookDeleteComponent
 }, {
   path: 'list-book/detail-book/:id',

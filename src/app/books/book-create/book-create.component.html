@@ -4,6 +4,15 @@
     Back to book list
   </a>
 </p>
+
+<div *ngIf="successMessage" class="alert alert-success">
+  <p>{{successMessage}}</p>
+</div>
+
+<div *ngIf="failMessage" class="alert alert-danger">
+  <p>{{failMessage}}</p>
+</div>
+
 <form #bookForm = "ngForm" (ngSubmit)="addBook(bookForm)">
   <table>
     <tr>
@@ -26,24 +35,4 @@
     </tr>
   </table>
 
-<!--  <div class="text-center text-uppercase font-weight-bold">-->
-<!--    <span style="font-size: 24px">Tạo mới Book</span>-->
-<!--  </div>-->
-<!--  <form #bookForm = "ngForm" (ngSubmit)="addBook(bookForm)">-->
-<!--    <label class="col">-->
-<!--      Title:-->
-<!--      <input type="text" name="title" ngModel class="form-control">-->
-<!--    </label>-->
-<!--    <label class="col">-->
-<!--      Author:-->
-<!--      <input type="text" name="author" ngModel class="form-control">-->
-<!--    </label>-->
-<!--    <label class="col">-->
-<!--      Description:-->
-<!--      <input type="text" name="description" ngModel class="form-control">-->
-<!--    </label>-->
-<!--    <div class="col">-->
-<!--      <button class="btn btn-info" type="submit">Tạo mới</button>-->
-<!--    </div>-->
-<!--  </form>-->
 
